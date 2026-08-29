@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.pnpm-store/
+*.tsbuildinfo
+premium-audit.json
+.env
+.env.local
+*.log
+.DS_Store
+Thumbs.db

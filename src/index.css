@@ -1,0 +1,33 @@
+:root {
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: #20241f;
+  background: #f7f7f3;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  scrollbar-color: #a8b1a5 #eff1eb;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { min-height: 100%; margin: 0; }
+body { min-width: 320px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: #eff1eb; }
+*::-webkit-scrollbar-thumb { background: #a8b1a5; border: 2px solid #eff1eb; border-radius: 10px; }
+*::-webkit-scrollbar-thumb:hover { background: #7c897b; }
+*::-webkit-scrollbar-thumb:active { background: #596658; }
+
+@media (forced-colors: active) {
+  :root { scrollbar-color: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
