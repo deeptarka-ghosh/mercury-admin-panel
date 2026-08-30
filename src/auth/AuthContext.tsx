@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useMemo, useState, type PropsWithChildren } from 'react';
 import { api, hasSession, setTokens } from '../api/client';
 import type { Role, SessionUser } from '../types';

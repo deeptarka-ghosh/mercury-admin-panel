@@ -1,7 +1,8 @@
 import {
   AnalyticsOutlined, CategoryOutlined, ChevronLeft, DashboardOutlined, GroupOutlined,
   Inventory2Outlined, Menu, PeopleOutline, ReceiptLongOutlined, SettingsOutlined,
-  StorefrontOutlined, TimelineOutlined,
+  StorefrontOutlined, TimelineOutlined, CollectionsBookmarkOutlined, CampaignOutlined,
+  LocalOfferOutlined, ViewCarouselOutlined, ViewQuiltOutlined, AutoAwesomeOutlined,
 } from '@mui/icons-material';
 import {
   AppBar, Avatar, Box, Chip, Divider, Drawer, IconButton, List, ListItemButton,
@@ -18,6 +19,12 @@ const navItems: Array<{ label: string; path: string; icon: ReactNode; roles: Rol
   { label: 'Overview', path: '/', icon: <DashboardOutlined />, roles: ['backend_read', 'backend_write', 'backend_admin'] },
   { label: 'Products', path: '/products', icon: <Inventory2Outlined />, roles: ['backend_read', 'backend_write', 'backend_admin'] },
   { label: 'Categories', path: '/categories', icon: <CategoryOutlined />, roles: ['backend_read', 'backend_write', 'backend_admin'] },
+  { label: 'Collections', path: '/collections', icon: <CollectionsBookmarkOutlined />, roles: ['backend_read', 'backend_write', 'backend_admin'] },
+  { label: 'Campaigns', path: '/campaigns', icon: <CampaignOutlined />, roles: ['backend_read', 'backend_write', 'backend_admin'] },
+  { label: 'Promotions', path: '/promotions', icon: <LocalOfferOutlined />, roles: ['backend_read', 'backend_write', 'backend_admin'] },
+  { label: 'Banners', path: '/banners', icon: <ViewCarouselOutlined />, roles: ['backend_read', 'backend_write', 'backend_admin'] },
+  { label: 'Homepage', path: '/homepage', icon: <ViewQuiltOutlined />, roles: ['backend_read', 'backend_write', 'backend_admin'] },
+  { label: 'Recommendations', path: '/recommendations', icon: <AutoAwesomeOutlined />, roles: ['backend_read', 'backend_write', 'backend_admin'] },
   { label: 'Orders', path: '/orders', icon: <ReceiptLongOutlined />, roles: ['backend_read', 'backend_write', 'backend_admin'] },
   { label: 'Customers', path: '/customers', icon: <PeopleOutline />, roles: ['backend_read', 'backend_write', 'backend_admin'] },
   { label: 'Analytics', path: '/analytics', icon: <AnalyticsOutlined />, roles: ['backend_read', 'backend_write', 'backend_admin'] },
@@ -71,7 +78,7 @@ export function AppShell() {
           <Toolbar sx={{ minHeight: '64px !important', px: { xs: 2, md: 4 } }}>
             {!desktop && <IconButton edge="start" aria-label="Open navigation" onClick={() => setMobileOpen(true)} sx={{ mr: 1 }}><Menu /></IconButton>}
             <Typography variant="body2" color="text.secondary" sx={{ flex: 1 }}>Saturday, 29 August</Typography>
-            <Chip size="small" label="Mock data" color="warning" variant="outlined" sx={{ fontWeight: 700 }} />
+            <Chip size="small" label="Live Mercury API" color="success" variant="outlined" sx={{ fontWeight: 700 }} />
           </Toolbar>
         </AppBar>
         <Box component="main" sx={{ px: { xs: 2, sm: 3, lg: 5 }, py: { xs: 3, lg: 4 }, maxWidth: 1600, mx: 'auto' }}><Outlet /></Box>
